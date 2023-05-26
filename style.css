@@ -10,7 +10,8 @@ body {
     font-family: 'Ubuntu', sans-serif;
     background-image: url(imagens/planodefun-1.jpg);
     background-size: cover;
-    height: 100vh; /* 100vh pega 100% do tamanho idependente da tela*/
+    background-repeat: no-repeat; /* Evita a repetição da imagem de fundo */
+    height: 100vh; 
     color: #ffffff;
 }
 
