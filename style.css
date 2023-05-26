@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-image: url(imagens/planodefun-1.jpg);
+    background-size: cover;
+    height: 100vh; /* 100vh pega 100% do tamanho idependente da tela*/
+    color: #ffffff;
+}
+
+form {
+    width: 600px;
+    margin: 0 auto;
+    padding: 32px;
+    background-color: lightgray;
+    border-radius: 16px;
+    background-color: rgba(0, 0, 0, 0.6); /*rgba serve para deixar tranparente de acordo com a cor passada*/
+}
+
+input, textarea {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #ffffff;
+    padding: 4px 4px;
+}
+
+fieldset {
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid gray;
+  margin-bottom: 16px;
+}
+
+legend {
+    padding: 0 8px;
+}
+
+/* DADOS PESSOAIS------------------------------------------------------------------------------------------- */
+
+#dados-pessoais {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* duas colunas de uma fração*/
+    gap:  16px; /* margin entre os elementos*/
+}
+
+#dados-pessoais  input {
+    width: 100%;
+}
+
+/* HABILIDADES------------------------------------------------------------------------------------------- */
+
+#habilidades {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+}
+
+#habilidades > p { /* colocamos o sinal de habilidades maior que p para dizer que mexa somente o p que é  filho direto de habilidades*/
+    grid-column: 1 / -1; /* esta linha serva para dizer que o paragrafo ira ocupar todas as colunas */
+    margin-bottom: 8px;
+
+}
+
+#habilidades  label{
+    display: flex;
+    gap: 4px;
+}
+
+#habilidades label:not(:last-child){ /* :not(:last-child) significa que as alterações serão feitas menos no ultimo filho*/
+    margin-bottom: 8px;
+}
+
+/* SOBRE------------------------------------------------------------------------------------------- */
+
+textarea {
+    width: 100%;
+    resize: none; /* resize permite que espanda para o lado selecionado no caso mone é pra nenhum lado*/
+}
+
+#sobre > p {
+    margin-bottom: 8px;
+}
+
+#sobre div {
+    position: relative;
+}
+
+#sobre span{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(-40%, -50%); /* faz o calculo com base do tamnho do elemento posisionando o item 250 no textarea*/
+}
+
+/* FEEDBACK------------------------------------------------------------------------------------------- */
+
+#feedback > p{
+    margin-bottom: 8px;
+}
+
+#feedback label{
+    display: flex;
+    gap: 3px;
+}
+
+#feedback > div{
+    display: flex;
+    gap: 32px;
+}
+
+/* AGREEMENT------------------------------------------------------------------------------------------- */
+
+form > div label {
+    display: flex;
+    gap: 32px;
+}
+
+form > div {
+    margin-bottom: 32px;
+}
+
+#button {
+    width: 100%;
+    border: none;
+    padding: 12px 24px;
+    margin-bottom: 32px;
+    cursor: pointer;
+    background-color: #2ebb30;
+    color: #ffffff;
+    font-weight: 700;
+    border-radius: 8px;
+}
